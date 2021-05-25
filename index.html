@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,700&display=swap" rel="stylesheet">
+    <!-- Title and Css -->
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript Calculator</h1>
+
+    <form name="form">
+        <input id="textview" name="textview">
+    
+
+  <div class="buttons">
+      <table>
+        <tr>
+            <!-- <span class="btn">8</span> -->
+            <td><input class="btn" type="button" value="c" onclick="form.textview.value = ''"></td>
+            <td><input class="btn" type="button" value="/" onclick="form.textview.value += '/'"></td>
+            <td><input class="btn" type="button" value="x" onclick="form.textview.value += '*'"></td>
+            <td><input class="btn" type="button" value="+" onclick="form.textview.value += '+'"></td>
+        </tr>
+          <tr>
+              <td><input class="btn" type="button" value="7" onclick="form.textview.value += '7'"></td>
+              <td><input class="btn" type="button" value="8" onclick="form.textview.value += '8'"></td>
+              <td><input class="btn" type="button" value="9" onclick="form.textview.value += '9'"></td>
+              <td><input class="btn" type="button" value="-" onclick="form.textview.value += '-'"></td>
+          </tr>
+          <tr>
+            <td><input class="btn" type="button" value="4" onclick="form.textview.value += '4'"></td>
+            <td><input class="btn" type="button" value="5" onclick="form.textview.value += '5'"></td>
+            <td><input class="btn" type="button" value="6" onclick="form.textview.value += '6'"></td>
+            <td rowspan=5><input class="btn" type="button" style="height: 120px;" value="=" onclick="if(form.textview.value === '') return
+            if(form.textview.value.endsWith('*')||form.textview.value.endsWith('/')||form.textview.value.endsWith('+')||form.textview.value.endsWith('-')) return
+form.textview.value=eval(form.textview.value);"></td>
+          </tr>
+          <tr>
+            <td><input class="btn" type="button" value="1" onclick="form.textview.value += '1'"></td>
+            <td><input class="btn" type="button" value="2" onclick="form.textview.value += '2'"></td>
+            <td><input class="btn" type="button" value="3" onclick="form.textview.value += '3'"></td>
+            <!-- <td rowspan=5><input class="btn" type="button" style="height: 100px;" value="=" onclick="form.textview.value=eval(form.textview.value)"></td> -->
+          </tr>
+      </table>
+  </div>
+</form>
+
+<h1 class="footer">Made by Gurubasavaraj!</h1>
+
+</body>
+</html>
