@@ -7,9 +7,11 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Title and Css -->
     <title>JavaScript Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Flash Buttons/flash.css">
 </head>
 <body>
     <h1>JavaScript Calculator</h1>
@@ -23,7 +25,7 @@
         <tr>
             <!-- <span class="btn">8</span> -->
             <td><input class="btn" type="button" value="c" onclick="form.textview.value = ''"></td>
-            <td><input class="btn" type="button" value="/" onclick="form.textview.value += '/'"></td>
+            <td><input class="btn" type="button" value="/" onclick="insert('/')"></td>
             <td><input class="btn" type="button" value="x" onclick="form.textview.value += '*'"></td>
             <td><input class="btn" type="button" value="+" onclick="form.textview.value += '+'"></td>
         </tr>
@@ -37,10 +39,7 @@
             <td><input class="btn" type="button" value="4" onclick="form.textview.value += '4'"></td>
             <td><input class="btn" type="button" value="5" onclick="form.textview.value += '5'"></td>
             <td><input class="btn" type="button" value="6" onclick="form.textview.value += '6'"></td>
-            <td rowspan=5><input class="btn" type="button" style="height: 120px;" value="=" onclick="if(form.textview.value === '') return
-            if(form.textview.value.endsWith('*')||form.textview.value.endsWith('/')||form.textview.value.endsWith('+')||form.textview.value.endsWith('-')) return
-                if(form.textview.value.startsWith('*')||form.textview.value.startsWith('/')||form.textview.value.startsWith('+')||form.textview.value.startsWith('-')) return
-form.textview.value=eval(form.textview.value);"></td>
+            <td rowspan=5><input class="btn" id="equals" type="button" style="height: 120px;" value="="></td>
           </tr>
           <tr>
             <td><input class="btn" type="button" value="1" onclick="form.textview.value += '1'"></td>
@@ -53,6 +52,13 @@ form.textview.value=eval(form.textview.value);"></td>
 </form>
 
 <h1 class="footer">Made by Gurubasavaraj!</h1>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="Flash Buttons/flash.jquery.min.js"></script>
+  <script src="Flash Buttons/flash.min.js"></script>
+
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="Messages.js"></script>
 
 </body>
 </html>

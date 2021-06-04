@@ -79,5 +79,8 @@ form #textview{
 .footer{
     position: absolute;
     top: 550px;
+}
+
+@media screen and (max-width: 320px){
     
 }
