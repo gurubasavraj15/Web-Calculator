@@ -8,9 +8,20 @@
       function calculate() {
         var problem = document.form.textview.value;
         // const chars = problem.split('');
-        var regex = /^[0-9,+,-,*,/]+$/;
+        var regex = /^(?:\d+[+\-*\/]?)+$/;
         if(problem === '') {
           new window.FlashMessage.error('Please enter something!', {
+            progress: false,
+            timeout: 8000,
+            interactive: true,
+            theme: 'default',
+          })
+          return
+        }
+        const chars = problem.toLowerCase().split('');
+        var isValid = regex.test(problem);
+        if(isValid === false) {
+          new window.FlashMessage.error('No Alphabets and special keys allowed!', {
             progress: false,
             timeout: 8000,
             interactive: true,
@@ -36,25 +47,26 @@
           })
           return
         }
-        const chars = problem.toLowerCase().split('');
-        var isValid = regex.test(problem);
-        if(isValid === false) {
-          new window.FlashMessage.error('No Alphabets and special keys allowed!', {
-            progress: false,
-            timeout: 8000,
-            interactive: true,
-            theme: 'default',
-          })
-          return
-        }
         var solution = eval(problem);
         document.form.textview.value = solution; 
     }
 
     calculate()
     })
+
+    document.getElementById('cle').addEventListener('click', () => {
+      document.form.textview.value = ''
+      new window.FlashMessage.success('Cleared!', {
+        progress: false,
+        timeout: 8000,
+        interactive: true,
+        theme:'default'
+      })
+    })
     // OR
-  
+    function insert(key){
+      document.form.textview.value += key
+    }
     // With a jQuery plugin
     $('document').ready(function () {
   
@@ -63,3 +75,7 @@
     });
   
   })(window, document, jQuery)
+
+  function insert(key){
+    document.form.textview.value += key
+  }

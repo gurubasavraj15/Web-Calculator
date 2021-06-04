@@ -24,27 +24,27 @@
       <table>
         <tr>
             <!-- <span class="btn">8</span> -->
-            <td><input class="btn" type="button" value="c" onclick="form.textview.value = ''"></td>
+            <td><input class="btn" id="cle" type="button" value="C"></td>
             <td><input class="btn" type="button" value="/" onclick="insert('/')"></td>
-            <td><input class="btn" type="button" value="x" onclick="form.textview.value += '*'"></td>
-            <td><input class="btn" type="button" value="+" onclick="form.textview.value += '+'"></td>
+            <td><input class="btn" type="button" value="x" onclick="insert('*')"></td>
+            <td><input class="btn" type="button" value="+" onclick="insert('+')"></td>
         </tr>
           <tr>
-              <td><input class="btn" type="button" value="7" onclick="form.textview.value += '7'"></td>
-              <td><input class="btn" type="button" value="8" onclick="form.textview.value += '8'"></td>
-              <td><input class="btn" type="button" value="9" onclick="form.textview.value += '9'"></td>
-              <td><input class="btn" type="button" value="-" onclick="form.textview.value += '-'"></td>
+              <td><input class="btn" type="button" value="7" onclick="insert('7')"></td>
+              <td><input class="btn" type="button" value="8" onclick="insert('8')"></td>
+              <td><input class="btn" type="button" value="9" onclick="insert('9')"></td>
+              <td><input class="btn" type="button" value="-" onclick="insert('-')"></td>
           </tr>
           <tr>
-            <td><input class="btn" type="button" value="4" onclick="form.textview.value += '4'"></td>
-            <td><input class="btn" type="button" value="5" onclick="form.textview.value += '5'"></td>
-            <td><input class="btn" type="button" value="6" onclick="form.textview.value += '6'"></td>
+            <td><input class="btn" type="button" value="4" onclick="insert('4')"></td>
+            <td><input class="btn" type="button" value="5" onclick="insert('5')"></td>
+            <td><input class="btn" type="button" value="6" onclick="insert('6')"></td>
             <td rowspan=5><input class="btn" id="equals" type="button" style="height: 120px;" value="="></td>
           </tr>
           <tr>
-            <td><input class="btn" type="button" value="1" onclick="form.textview.value += '1'"></td>
-            <td><input class="btn" type="button" value="2" onclick="form.textview.value += '2'"></td>
-            <td><input class="btn" type="button" value="3" onclick="form.textview.value += '3'"></td>
+            <td><input class="btn" type="button" value="1" onclick="insert('1')"></td>
+            <td><input class="btn" type="button" value="2" onclick="insert('2')"></td>
+            <td><input class="btn" type="button" value="3" onclick="insert('3')"></td>
             <!-- <td rowspan=5><input class="btn" type="button" style="height: 100px;" value="=" onclick="form.textview.value=eval(form.textview.value)"></td> -->
           </tr>
       </table>
@@ -57,7 +57,7 @@
   <script src="Flash Buttons/flash.jquery.min.js"></script>
   <script src="Flash Buttons/flash.min.js"></script>
 
-<script type="text/javascript" src="main.js"></script>
+<!-- <script type="text/javascript" src="main.js"></script> -->
 <script type="text/javascript" src="Messages.js"></script>
 
 </body>
